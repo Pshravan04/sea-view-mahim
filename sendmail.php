@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "email"        => $safe_email,
         "phone"        => "'" . $safe_phone,
         "config"       => "Not Specified",
-        "source"       => "Mahindra Mahindra rainforest Kanjur marg Website",
+        "source"       => "Raymond Sea View Mahim Website",
         "submitted_at" => date("Y-m-d H:i:s")
     ]);
 
@@ -117,13 +117,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->addAddress('tgmshravan@gmail.com');
 
             $mail->isHTML(true);
-            $mail->Subject = 'New Lead - Mahindra Mahindra rainforest Kanjur marg';
+            $mail->Subject = 'New Lead - Raymond Sea View Mahim';
             $mail->Body = "
                 <h2>New Lead Submission</h2>
                 <p><strong>Name:</strong> {$safe_name}</p>
                 <p><strong>Email:</strong> {$safe_email}</p>
                 <p><strong>Phone:</strong> {$safe_phone}</p>
-                <p><strong>Source:</strong> Mahindra Mahindra rainforest Kanjur marg Website</p>
+                <p><strong>Source:</strong> Raymond Sea View Mahim Website</p>
             ";
 
             $mail->send();
@@ -137,13 +137,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!$email_sent) {
         // Fallback to standard PHP mail()
         $to = "salesconnect.teambb@gmail.com, thegrowthmonks@gmail.com, tgmshravan@gmail.com";
-        $subject = "New Lead - Mahindra Mahindra rainforest Kanjur marg";
+        $subject = "New Lead - Raymond Sea View Mahim";
         $message = "
             <h2>New Lead Submission</h2>
             <p><strong>Name:</strong> {$safe_name}</p>
             <p><strong>Email:</strong> {$safe_email}</p>
             <p><strong>Phone:</strong> {$safe_phone}</p>
-            <p><strong>Source:</strong> Mahindra Mahindra rainforest Kanjur marg Website</p>
+            <p><strong>Source:</strong> Raymond Sea View Mahim Website</p>
         ";
         $headers = "MIME-Version: 1.0\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8\r\n";
